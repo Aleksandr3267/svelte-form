@@ -60,7 +60,7 @@
     <InputField label="Subject" bind:value={formData.subject} />
     <InputField label="Message" bind:value={formData.message} required={true} error={errors.message} />
     <Checkbox label="" bind:checked={formData.consent} error={errors.consent} />
-    <SubmitButton color="#007bff" />
+    <SubmitButton  />
   </form>
   
   <style>
@@ -113,7 +113,9 @@
       cursor: pointer;
       color: #155724;
     }
-
+    .notification button:active, .notification button:focus {
+      outline: none !important;
+    }
     @media(max-width:600px){
         form{
             padding: 25px 20px;

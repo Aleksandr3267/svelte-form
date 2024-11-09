@@ -1,6 +1,5 @@
 <!-- src/components/SubmitButton.svelte -->
 <script>
-    // export let color = "#007bff";
   </script>
   
   <button type="submit" >Send</button>
@@ -20,9 +19,11 @@
         margin: 0 auto;
         margin-top: 30px;
     }
-  
+    button:active, button:focus {
+      outline: none !important;
+    }
     button:hover {
-      background-color: grey;
+      background-color: rgb(64, 68, 99);
     }
   </style>
   

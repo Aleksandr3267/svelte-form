@@ -6,14 +6,14 @@
     export let required = false;
     export let error = "";
   
-    let isFocused = false; // Переменная для отслеживания фокуса
+    let isFocused = false; 
     const handleInput = (e) => {
       value = e.target.value;
     };
   </script>
   
   <div class="input-field">
-    <label class:focused={isFocused}>{label}{required ? ' *' : ''}</label>  <!-- Класс focused для метки -->
+    <label class:focused={isFocused}>{label}{required ? ' *' : ''}</label>  
     <input 
       type={type} 
       bind:value 
@@ -43,7 +43,7 @@
   
     label {
       font-weight: bold;
-      transition: color 0.3s ease;  /* Плавный переход для цвета */
+      transition: color 0.3s ease;  
       text-align: start;
       color: rgb(121, 126, 163);
       font-size: 15px;
@@ -54,7 +54,7 @@
     }
   
     label.focused {
-      color: white;  /* Цвет метки при фокусе */
+      color: white; 
     }
   
     input {
@@ -64,7 +64,7 @@
       border: none;
       border-bottom: 1px solid rgb(63, 67, 99);
       background-color: transparent;
-      transition: border-color 0.3s ease;  /* Плавный переход для цвета границы */
+      transition: border-color 0.3s ease; 
 
         color: rgb(255, 255, 255);
         font-size: 18px;
@@ -72,18 +72,15 @@
         line-height: 120%;
     }
   
-    /* Цвет инпута при фокусе */
     input.focused {
-      border-color: rgb(255, 255, 255);  /* Белая граница при фокусе */
+      border-color: rgb(255, 255, 255);  
     }
-  
-    /* Стиль при фокусе на поле и при ошибке */
     input.focused.error {
-      border-color: #d9534f;  /* Красная граница при ошибке */
+      border-color: #d9534f;  
     }
   
     input:focus + label {
-      color: red;  /* Изменение цвета метки при фокусе (вместо :focus) */
+      color: red;  
     }
   
     .error-message {

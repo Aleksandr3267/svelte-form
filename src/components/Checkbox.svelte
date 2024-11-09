@@ -7,7 +7,7 @@
   <div class="checkbox">
     <label>
       <input type="checkbox" bind:checked={checked} />
-      <span class="checkbox-custom"></span> <!-- Кастомизированный чекбокс -->
+      <span class="checkbox-custom"></span>
       {label}<p>I accept<span>&nbsp;Terms and Privacy Policy</span></p>
     </label>
     {#if error}
@@ -23,7 +23,7 @@
     }
   
     input {
-      display: none; /* Скрываем стандартный чекбокс */
+      display: none; 
     }
   
     .checkbox-custom {
@@ -38,13 +38,13 @@
     }
   
     input:checked + .checkbox-custom {
-      background-color: rgb(44, 47, 71); /* Фон чекбокса при активной галочке */
-      border-color: rgb(44, 47, 71); /* Граница при активной галочке */
+      background-color: rgb(44, 47, 71); 
+      border-color: rgb(44, 47, 71); 
     }
   
     input:checked + .checkbox-custom::after {
-      content: '✔';
-      color: white; /* Цвет галочки */
+      content: url('./images/arrow.svg');
+      color: white; 
       font-size: 16px;
       position: absolute;
       top: 50%;
